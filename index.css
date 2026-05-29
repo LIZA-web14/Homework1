@@ -1,0 +1,508 @@
+/* Обнуление базовых стилей для всех элементов */
+
+* {
+
+    /* Убираем внутренние отступы */
+
+    padding: 0;
+
+    /* Убираем внешние отступы */
+
+    margin: 0;
+
+    /* Убираем границы */
+
+    border: 0;
+
+}
+
+
+
+/* Подключаем box-sizing: border-box для всех элементов и псевдоэлементов */
+
+*, *:before, *:after {
+
+    /* Для Firefox */
+
+    -moz-box-sizing: border-box;
+
+    /* Для старых WebKit-браузеров */
+
+    -webkit-box-sizing: border-box;
+
+    /* Ширина и высота включают padding и border */
+
+    box-sizing: border-box;
+
+}
+
+
+
+/* Убираем обводку у элементов в фокусе и активном состоянии */
+
+:focus, :active {
+
+    outline: none;
+
+}
+
+
+
+/* Убираем обводку у ссылок в фокусе и активном состоянии */
+
+a:focus, a:active {
+
+    outline: none;
+
+}
+
+
+
+/* Делаем HTML5-семантические элементы блочными */
+
+nav, footer, header, aside {
+
+    display: block;
+
+}
+
+
+
+/* Базовые настройки html и body */
+
+html, body {
+
+    /* Высота на весь экран */
+
+    height: 100%;
+
+    /* Ширина на весь экран */
+
+    width: 100%;
+
+    /* Базовый размер шрифта */
+
+    font-size: 100%;
+
+    /* Базовая высота строки */
+
+    line-height: 1;
+
+    /* Устанавливаем размер шрифта 14px */
+
+    font-size: 14px;
+
+    /* Запрещаем автоувеличение текста в IE */
+
+    -ms-text-size-adjust: 100%;
+
+    /* Запрещаем автоувеличение текста в Firefox */
+
+    -moz-text-size-adjust: 100%;
+
+    /* Запрещаем автоувеличение текста в Safari/iOS */
+
+    -webkit-text-size-adjust: 100%;
+
+}
+
+
+
+/* Наследуем шрифт для форм */
+
+input, button, textarea {
+
+    font-family: inherit;
+
+}
+
+
+
+/* Убираем крестик очистки в input у IE */
+
+input::-ms-clear {
+
+    display: none;
+
+}
+
+
+
+/* Показываем курсор-указатель при наведении на кнопку */
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+
+/* Убираем внутренний отступ и рамку у кнопок в Firefox */
+
+button::-moz-focus-inner {
+
+    padding: 0;
+
+    border: 0;
+
+}
+
+
+
+/* Убираем подчеркивание у ссылок и посещённых ссылок */
+
+a, a:visited {
+
+    text-decoration: none;
+
+}
+
+
+
+/* Убираем подчеркивание при наведении на ссылку */
+
+a:hover {
+
+    text-decoration: none;
+
+}
+
+
+
+/* Убираем маркеры у элементов списка */
+
+ul li {
+
+    list-style: none;
+
+}
+
+
+
+/* Убираем лишний отступ у изображений */
+
+img {
+
+    vertical-align: top;
+
+}
+
+
+
+/* Сбрасываем стили заголовков */
+
+h1, h2, h3, h4, h5, h6 {
+
+    /* Наследуем размер шрифта */
+
+    font-size: inherit;
+
+    /* Устанавливаем обычную жирность */
+
+    font-weight: 400;
+
+}
+
+a, button, input {
+    font-family: "Montserrat", "sans-serif";
+}
+
+body {
+    font-family: "Montserrat", "sans-serif";
+}
+
+
+.hero {
+    background-image: url(./img/фон1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero__blok {
+    padding-top: 196px;
+    padding-bottom: 270px;
+    max-width: 769px;
+    padding-left: 57px;
+}
+
+.hero__title {
+    max-width: ;width: 769px; 
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    margin-bottom: 24px;
+
+}
+
+
+.hero__paragraph {
+    width: 720px;
+    height: 64px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 48px;
+
+}
+
+.hero__title_bold-text {
+    font-weight: bold;
+}
+
+.button {
+    padding: 16px 65px;
+
+    background: #202027;
+    border: 1px solid #202027;
+    border-radius: 60px;
+
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+    font-size: 24px;
+
+}
+
+/*  Главный контейнер (как окошко, скрывает всё, что выходит за рамки экрана) */
+.games-line {
+    width: 100%;
+    overflow: hidden;
+    /* Свойство, которое скрывает всё, что выходит за границы блока */
+    background-color: #BCEC30;
+    /* Цвет фона полосы */
+    padding: 27px 0;
+    /* Отступы сверху и снизу полосы */
+}
+
+/*  Дорожка, которая будет двигаться */
+.games-line__track {
+    display: flex;
+    width: max-content;
+    /* ширина блока будет такой, сколько нужно его содержимому. */
+    animation: scroll-left 25s linear infinite;
+    /* 25s — скорость. Больше секунд = медленнее */
+}
+
+/*  Оформление блоков с текстом */
+.games-line__content {
+    display: flex;
+    align-items: center;
+    gap: 51px;
+    /* Расстояние между текстом и звездочкой */
+    padding-right: 51px;
+    /* Отступ в конце блока, чтобы он не слипался со вторым */
+    flex-shrink: 0;
+}
+
+/* 4. Стили для текста игр */
+.games-line span {
+    white-space: nowrap;
+    /* Запрещаем тексту переноситься на новую строку */
+    font-size: 30px;
+    /* Размер шрифта */
+    font-weight: 700;
+    /* Жирность */
+    color: #202027;
+    /* Цвет текста */
+    text-transform: uppercase;
+    /* Все буквы заглавные */
+}
+
+/* 5. Выравнивание звездочки */
+.star {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* 6. Сама анимация движения влево */
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+        /* Старт: полоса стоит на месте */
+    }
+
+    to {
+        transform: translateX(-50%);
+        /* Финиш: сдвигаем ровно на половину (на длину одного блока) */
+    }
+}
+
+/* Основная часть */
+
+.hero-black {
+    padding-top: 94px;
+}
+
+.hero-black {
+    background-image: url(./img/black_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.hero-black__title {
+    width: 314px;
+    height: 78px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+}
+
+.hero-black__paragraph {
+    width: 788px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #FFFFFF;
+
+}
+
+.hero-black__title-blok {
+    margin-bottom: 72px;
+}
+
+ .hero-black__blocs {
+    
+   display: grid;
+    /* Создаем ровно 3 колонки одинаковой ширины */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Расстояние между карточками (и по горизонтали, и по вертикали) */
+    gap: 32px; 
+    align-items: start;
+    
+
+} 
+
+.hero-black__img {
+    margin-bottom: 32px;
+    border-radius: 30px;
+    width: 100%;
+    /* Чтобы картинка подстраивалась под размер колонки */
+    height: auto;
+    /* Чтобы сохранялись пропорции */
+    display: block;
+    /* Убирает лишний отступ снизу у картинок */
+}
+
+.hero-black__number_1 {
+    height: 473px;
+}
+
+.hero-black__number_2 {
+    height: 512px;
+}
+
+.hero-black__number_3 {
+    height: 473px;
+}
+
+.hero-black__number_4 {
+    height: 551px;
+}
+
+.hero-black__number_5 {
+    height: 512px;
+}
+
+.hero-black__number_6 {
+    height: 551px;
+}
+
+.hero-black__mini-paragraph {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px 10px;
+    width: 112px;
+    height: 36px;
+    background: #F7F7F7;
+    border-radius: 52.5825px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    margin-left: 32px;
+
+}
+
+.hero-black__big-paragraph {
+    margin-bottom: 36px;
+
+    width: 314px;
+    height: 39px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+
+    color: #202027;
+    margin-left: 32px;
+    
+
+
+}
+
+.hero-black__number {
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    overflow: hidden; /* Картинки будут идеально скругляться по углам карточки */
+    
+    
+}
+/* .hero-black__number_1 {
+    min-height: 473px;
+
+}
+.hero-black__number_2 {
+    min-height: 512px;
+
+} */
+
+
+
+
+
+.hero-black__mini-games {
+margin-top: 96px;
+}
+.hero-black__big-blocs-games {
+    color: #FFFFFF;
+
+}
+
+.hero-black__paragrap1-mini-games {
+    
+width: 504px;
+height: 59px;
+
+font-weight: 700;
+font-size: 48px;
+line-height: 59px;
+
+
+color: #202027;
+
+
+}
+.hero-black__paragrap-mini-games{
+    
+width: 457px;
+height: 64px;
+font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+
+color: #202027;
+
+}
