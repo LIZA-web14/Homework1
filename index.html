@@ -8,149 +8,183 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <div class="hero ">
+    <div class="hero center ">
+
+        <svg class="hero__blok-star" width="128" height="82" viewBox="0 0 128 82" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M35.7285 45.9756L35.8086 46.1914L36.0244 46.2715L55.5586 53.5L36.0244 60.7285L35.8086 60.8086L35.7285 61.0244L28.5 80.5586L21.2715 61.0244L21.1914 60.8086L20.9756 60.7285L1.44043 53.5L20.9756 46.2715L21.1914 46.1914L21.2715 45.9756L28.5 26.4404L35.7285 45.9756Z"
+                fill="#BCEC30" stroke="#202027" />
+            <path
+                d="M114.758 12.9473L114.838 13.1621L115.053 13.2422L126.559 17.5L115.053 21.7578L114.838 21.8379L114.758 22.0527L110.5 33.5586L106.242 22.0527L106.162 21.8379L105.947 21.7578L94.4404 17.5L105.947 13.2422L106.162 13.1621L106.242 12.9473L110.5 1.44043L114.758 12.9473Z"
+                stroke="#202027" />
+        </svg>
+
+
+        <svg class="hero__blok-big-star" width="1075" height="1131" viewBox="0 0 1075 1131" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M241.293 323.457L317.5 411.837L0.5 486.457" stroke="#202027" stroke-linecap="round" />
+            <path
+                d="M708.182 381.863C717.611 384.488 980.016 495.421 980.016 495.421L701.611 525.305L877.494 751.117L629.536 596.869L604.272 858.313L534.384 582.988L301.438 713.95L461.905 521.723L177.13 508.746L444.803 428.483L245.904 199.416L525.536 330.96L589.531 77.147L618.268 331.505L872.98 156.059L708.182 381.863Z"
+                fill="#BCEC30" stroke="#202027" stroke-miterlimit="10" stroke-linecap="round" />
+            <path d="M231.582 587.457H355.5L213.5 766.457" stroke="#202027" stroke-linecap="round" />
+            <path d="M371.5 791.502L485.26 712.457L591.382 1130.46" stroke="#202027" stroke-linecap="round" />
+            <path d="M449.659 801.457L393.5 860.222L473.5 927.457L449.659 801.457Z" fill="#BCEC30" stroke="#202027"
+                stroke-linecap="round" />
+            <path d="M491.5 996.457L525.5 1120.46" stroke="#202027" stroke-linecap="round" />
+            <path
+                d="M117.527 885.134L117.607 885.349L117.823 885.429L130.059 889.957L117.823 894.484L117.607 894.564L117.527 894.78L113 907.015L108.473 894.78L108.393 894.564L108.177 894.484L95.9404 889.957L108.177 885.429L108.393 885.349L108.473 885.134L113 872.897L117.527 885.134Z"
+                fill="#BCEC30" stroke="#202027" />
+            <path
+                d="M211.74 931.922L211.819 932.137L212.035 932.217L241.059 942.957L212.035 953.697L211.819 953.776L211.74 953.992L201 983.015L190.26 953.992L190.181 953.776L189.965 953.697L160.94 942.957L189.965 932.217L190.181 932.137L190.26 931.922L201 902.897L211.74 931.922Z"
+                stroke="#202027" />
+        </svg>
         <div class="hero__blok ">
             <h1 class="hero__title">Добро пожаловать на мой сайт мини-игр</h1>
             <p class="hero__paragraph">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай <span
                     class="hero__title_bold-text">«Поехали!»</span> и
                 <span class="hero__title_bold-text">приступай.</span>
             </p>
-            <button class="button">Поехали!</button>
+            <a href="#games" class="button">Поехали!</a>
+
+
 
 
         </div>
 
-        <div class="games-line">
-            <div class="games-line__track">
 
-                <!-- ЧАСТЬ 1 -->
-                <div class="games-line__content">
-                    <span>Викторина</span>
-                    <span class="star">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
-                                fill="#202027" />
-                        </svg>
-                    </span>
 
-                    <span>Угадай число</span>
-                    <span class="star">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
-                                fill="#202027" />
-                        </svg>
-                    </span>
 
-                    <span>Переверни текст</span>
-                    <span class="star">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
-                                fill="#202027" />
-                        </svg>
-                    </span>
+    </div>
+    <div class="games-line">
+        <div class="games-line__track">
 
-                    <span>Простая арифметика</span>
-                    <span class="star">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
-                                fill="#202027" />
-                        </svg>
-                    </span>
+            <!-- ЧАСТЬ 1 -->
+            <div class="games-line__content">
+                <span>Викторина</span>
+                <span class="star">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
+                            fill="#202027" />
+                    </svg>
+                </span>
 
-                    <span>Камень, ножницы, бумага</span>
-                    <span class="star">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
-                                fill="#202027" />
-                        </svg>
-                    </span>
+                <span>Угадай число</span>
+                <span class="star">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
+                            fill="#202027" />
+                    </svg>
+                </span>
 
-                    <span>Генератор случайных цветов</span>
-                    <span class="star">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
-                                fill="#202027" />
-                        </svg>
-                    </span>
-                </div>
+                <span>Переверни текст</span>
+                <span class="star">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
+                            fill="#202027" />
+                    </svg>
+                </span>
 
-                <!-- ЧАСТЬ 2 (Точно такая же, нужна для бесконечного эффекта) -->
-                <div class="games-line__content" aria-hidden="true">
-                    <span>Викторина</span>
-                    <span class="star">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
-                                fill="#202027" />
-                        </svg>
-                    </span>
+                <span>Простая арифметика</span>
+                <span class="star">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
+                            fill="#202027" />
+                    </svg>
+                </span>
 
-                    <span>Угадай число</span>
-                    <span class="star">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
-                                fill="#202027" />
-                        </svg>
-                    </span>
+                <span>Камень, ножницы, бумага</span>
+                <span class="star">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
+                            fill="#202027" />
+                    </svg>
+                </span>
 
-                    <span>Переверни текст</span>
-                    <span class="star">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
-                                fill="#202027" />
-                        </svg>
-                    </span>
-
-                    <span>Простая арифметика</span>
-                    <span class="star">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
-                                fill="#202027" />
-                        </svg>
-                    </span>
-
-                    <span>Камень, ножницы, бумага</span>
-                    <span class="star">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
-                                fill="#202027" />
-                        </svg>
-                    </span>
-
-                    <span>Генератор случайных цветов</span>
-                    <span class="star">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
-                                fill="#202027" />
-                        </svg>
-                    </span>
-                </div>
-
+                <span>Генератор случайных цветов</span>
+                <span class="star">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
+                            fill="#202027" />
+                    </svg>
+                </span>
             </div>
+
+            <!-- ЧАСТЬ 2 (Точно такая же, нужна для бесконечного эффекта) -->
+            <div class="games-line__content" aria-hidden="true">
+                <span>Викторина</span>
+                <span class="star">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
+                            fill="#202027" />
+                    </svg>
+                </span>
+
+                <span>Угадай число</span>
+                <span class="star">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
+                            fill="#202027" />
+                    </svg>
+                </span>
+
+                <span>Переверни текст</span>
+                <span class="star">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
+                            fill="#202027" />
+                    </svg>
+                </span>
+
+                <span>Простая арифметика</span>
+                <span class="star">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
+                            fill="#202027" />
+                    </svg>
+                </span>
+
+                <span>Камень, ножницы, бумага</span>
+                <span class="star">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
+                            fill="#202027" />
+                    </svg>
+                </span>
+
+                <span>Генератор случайных цветов</span>
+                <span class="star">
+                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z"
+                            fill="#202027" />
+                    </svg>
+                </span>
+            </div>
+
         </div>
     </div>
 
-
-    <div class="hero-black">
+    <div class="hero-black center">
         <div class="hero-black__about-games">
-            <div class="hero-black__title-blok ">
+            <div class="hero-black__title-blok" id="games">
                 <h2 class="hero-black__title">Об играх</h2>
                 <p class="hero-black__paragraph">В моей коллекции представлено 6 игр на разные темы.
                 </p>
@@ -158,12 +192,17 @@
                     них может поиграть каждый.
                 </p>
                 <p class="hero-black__paragraph">Все игры доступны для пользования.</p>
+                <svg  class="hero-black_star1" width="458" height="567" viewBox="0 0 458 567" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M311.162 184.877L311.375 185.435L311.886 185.126L479.433 83.8166L380.125 252.557L379.822 253.073L380.383 253.28L564.053 321.108L370.209 348.674L369.617 348.758L369.804 349.326L431.29 535.214L288.88 400.849L288.444 400.439L288.117 400.94L181.119 564.91L197.379 369.793L197.429 369.197L196.833 369.254L1.9221 387.833L164.611 278.892L165.107 278.56L164.691 278.129L28.6398 137.326L215.247 196.597L215.818 196.778L215.895 196.186L241.152 2.02586L311.162 184.877Z"
+                        stroke="#BCEC30" />
+                </svg>
 
             </div>
             <div class="hero-black__blocs">
                 <div class="hero-black__number hero-black__number_1">
                     <img class="hero-black__img" src="./img/1.jpg" alt="Угадай число">
-                    
+
                     <p class="hero-black__mini-paragraph">Игра № 1</p>
                     <p class="hero-black__big-paragraph">Угадай число</p>
                 </div>
@@ -198,46 +237,69 @@
 
         </div>
 
-                <div class="hero-black__mini-games">
+        <div class="hero-black__mini-games center">
             <h3 class="hero-black__title">Мини-игры</h3>
             <div class="hero-black__blocs-games">
                 <div class="hero-black__big-blocs-games">
-                   
+
                     <img class="hero-black__game-img" src="./img/1.jpg" alt="Угадай число">
+
                     <p class="hero-black__paragrap1-mini-games">Угадай число</p>
                     <p class="hero-black__paragrap-mini-games">Попробуй угадать случайное число от 1 до 100.</p>
                     <button class="button-play">Играть!</button>
+
+
+
                 </div>
                 <div class="hero-black__big-blocs-games">
                     <img class="hero-black__game-img" src="./img/2.jpg" alt="Простая арифметика">
+
                     <p class="hero-black__paragrap1-mini-games">Простая арифметика</p>
                     <p class="hero-black__paragrap-mini-games">Попробуй решить простые арифметические задачи..</p>
                     <button class="button-play">Играть!</button>
+
+
                 </div>
                 <div class="hero-black__big-blocs-games">
                     <img class="hero-black__game-img" src="./img/3.jpg" alt="Переверни текст">
+
+
                     <p class="hero-black__paragrap1-mini-games">Переверни текст</p>
                     <p class="hero-black__paragrap-mini-games">Попробуй ввести текст, который будет перевернут.</p>
                     <button class="button-play">Играть!</button>
+
                 </div>
                 <div class="hero-black__big-blocs-games">
-                    <!-- Исправили текст и картинку для 4-й игры -->
+
                     <img class="hero-black__game-img" src="./img/4.jpg" alt="Камень, ножницы, бумага">
+
+
                     <p class="hero-black__paragrap1-mini-games">Камень, ножницы, бумага</p>
-                    <p class="hero-black__paragrap-mini-games">Сыграй с компьютером в классическую игру и попытай удачу.</p>
+                    <p class="hero-black__paragrap-mini-games">Сыграй с компьютером в классическую игру и попытай
+                        удачу.</p>
                     <button class="button-play">Играть!</button>
+
                 </div>
                 <div class="hero-black__big-blocs-games">
                     <img class="hero-black__game-img" src="./img/5.jpg" alt="Простая викторина">
+
+
                     <p class="hero-black__paragrap1-mini-games">Простая викторина</p>
-                    <p class="hero-black__paragrap-mini-games">Отвечай на вопросы викторины с вариантами ответов.</p>
+                    <p class="hero-black__paragrap-mini-games">Отвечай на вопросы викторины с вариантами ответов.
+                    </p>
                     <button class="button-play">Играть!</button>
+
                 </div>
                 <div class="hero-black__big-blocs-games">
                     <img class="hero-black__game-img" src="./img/6.jpg" alt="Генератор случайных цветов">
+
+
                     <p class="hero-black__paragrap1-mini-games">Генератор случайных цветов</p>
-                    <p class="hero-black__paragrap-mini-games">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
+                    <p class="hero-black__paragrap-mini-games">Игра, в которой при клике на кнопку фон страницы
+                        меняется
+                        на случайный.</p>
                     <button class="button-play">Играть!</button>
+
                 </div>
             </div>
         </div>
