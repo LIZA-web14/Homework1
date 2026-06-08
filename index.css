@@ -1,277 +1,155 @@
 /* Обнуление базовых стилей для всех элементов */
-
 * {
-
     /* Убираем внутренние отступы */
-
     padding: 0;
-
     /* Убираем внешние отступы */
-
     margin: 0;
-
     /* Убираем границы */
-
     border: 0;
-
 }
-
-
-
 /* Подключаем box-sizing: border-box для всех элементов и псевдоэлементов */
-
-*, *:before, *:after {
-
+*, *::before, *::after {
     /* Для Firefox */
-
     -moz-box-sizing: border-box;
-
     /* Для старых WebKit-браузеров */
-
     -webkit-box-sizing: border-box;
-
     /* Ширина и высота включают padding и border */
-
     box-sizing: border-box;
-
 }
-
-
-
 /* Убираем обводку у элементов в фокусе и активном состоянии */
-
 :focus, :active {
-
     outline: none;
-
 }
-
-
-
 /* Убираем обводку у ссылок в фокусе и активном состоянии */
-
 a:focus, a:active {
-
     outline: none;
-
 }
-
-
-
 /* Делаем HTML5-семантические элементы блочными */
-
 nav, footer, header, aside {
-
     display: block;
-
 }
-
-
-
 /* Базовые настройки html и body */
-
 html, body {
-
     /* Высота на весь экран */
-
     height: 100%;
-
     /* Ширина на весь экран */
-
     width: 100%;
-
     /* Базовый размер шрифта */
-
     font-size: 100%;
-
     /* Базовая высота строки */
-
     line-height: 1;
-
     /* Устанавливаем размер шрифта 14px */
-
     font-size: 14px;
-
     /* Запрещаем автоувеличение текста в IE */
-
     -ms-text-size-adjust: 100%;
-
     /* Запрещаем автоувеличение текста в Firefox */
-
     -moz-text-size-adjust: 100%;
-
     /* Запрещаем автоувеличение текста в Safari/iOS */
-
     -webkit-text-size-adjust: 100%;
-
 }
-
-
-
 /* Наследуем шрифт для форм */
-
 input, button, textarea {
-
     font-family: inherit;
-
 }
-
-
-
 /* Убираем крестик очистки в input у IE */
-
 input::-ms-clear {
-
     display: none;
-
 }
-
-
-
 /* Показываем курсор-указатель при наведении на кнопку */
-
 button {
-
     cursor: pointer;
-
 }
-
-
-
 /* Убираем внутренний отступ и рамку у кнопок в Firefox */
-
 button::-moz-focus-inner {
-
     padding: 0;
-
     border: 0;
-
 }
-
-
-
 /* Убираем подчеркивание у ссылок и посещённых ссылок */
-
 a, a:visited {
-
     text-decoration: none;
-
 }
-
-
-
 /* Убираем подчеркивание при наведении на ссылку */
-
 a:hover {
-
     text-decoration: none;
-
 }
-
-
-
 /* Убираем маркеры у элементов списка */
-
 ul li {
-
     list-style: none;
-
 }
-
-
-
 /* Убираем лишний отступ у изображений */
-
 img {
-
     vertical-align: top;
-
 }
-
-
-
 /* Сбрасываем стили заголовков */
-
 h1, h2, h3, h4, h5, h6 {
-
     /* Наследуем размер шрифта */
-
     font-size: inherit;
-
     /* Устанавливаем обычную жирность */
-
     font-weight: 400;
-
 }
 .center {
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
 }
-
 a, button, input {
     font-family: "Montserrat", "sans-serif";
 }
-
 body {
     font-family: "Montserrat", "sans-serif";
 }
+.hero__blok-star {
+    position: absolute;
+    top: 69px;
+    left: 63px;
+}
 .hero__blok-big-star {
-  
-  position: absolute;
+    position: absolute;
     top: 0;
     right: 0;
     z-index: 1;
-     top: -330px;
+    top: -330px;
     right: 0px;
-    right: -480px
-
+    right: -480px;
 }
 .hero__blok-mini-star {
     top: 69px;
     position: absolute;
-
 }
-.hero-black_star1 {
-position: absolute;
-
+.hero-black__star {
+    position: absolute;
+    z-index: 1;
+}
+.hero-black__star_size_large {
     right: 0;
-    top: 0;
-
+    top: 77px;
 }
-
-
+.hero-black__star_size_small {
+    left: 25px;
+    top: 770px;
+}
 .hero {
-     background-image: url(./img/fon.jpg); 
+    background-image: url(./img/fon.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-     position: relative;
-     overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
-
 .hero__blok {
     padding-top: 196px;
     padding-bottom: 159px;
     max-width: 769px;
-    
     position: relative;
     z-index: 2;
-
-   
 }
-
 .hero__title {
-    max-width: 769px; 
-
+    max-width: 769px;
     font-style: normal;
     font-weight: 700;
     font-size: 64px;
     line-height: 78px;
     margin-bottom: 24px;
-
 }
-
-
 .hero__paragraph {
     width: 720px;
     height: 64px;
@@ -280,39 +158,36 @@ position: absolute;
     font-size: 24px;
     line-height: 32px;
     margin-bottom: 48px;
-
 }
-
-.hero__title_bold-text {
+.hero__accent {
     font-weight: bold;
 }
-
 .button {
     padding: 16px 65px;
-
     background: #202027;
     border: 1px solid #202027;
     border-radius: 60px;
-
     color: #fff;
     font: inherit;
     cursor: pointer;
     font-size: 24px;
-
 }
 
-/*  Главный контейнер (как окошко, скрывает всё, что выходит за рамки экрана) */
+.button:hover {
+    background-color: #FFFFFF;
+    color: #202027;
+}
+/* Главный контейнер (как окошко, скрывает всё, что выходит за рамки экрана) */
 .games-line {
     width: 100%;
     overflow: hidden;
     /* Свойство, которое скрывает всё, что выходит за границы блока */
-    background-color: #BCEC30; 
+    background-color: #BCEC30;
     /* Цвет фона полосы */
     padding: 27px 0;
     /* Отступы сверху и снизу полосы */
-} 
-
-/*  Дорожка, которая будет двигаться */
+}
+/* Дорожка, которая будет двигаться */
 .games-line__track {
     display: flex;
     width: max-content;
@@ -320,8 +195,7 @@ position: absolute;
     animation: scroll-left 25s linear infinite;
     /* 25s — скорость. Больше секунд = медленнее */
 }
-
-/*  Оформление блоков с текстом */
+/* Оформление блоков с текстом */
 .games-line__content {
     display: flex;
     align-items: center;
@@ -331,7 +205,6 @@ position: absolute;
     /* Отступ в конце блока, чтобы он не слипался со вторым */
     flex-shrink: 0;
 }
-
 /* 4. Стили для текста игр */
 .games-line span {
     white-space: nowrap;
@@ -345,7 +218,6 @@ position: absolute;
     text-transform: uppercase;
     /* Все буквы заглавные */
 }
-
 /* 5. Выравнивание звездочки */
 .star {
     display: flex;
@@ -353,68 +225,54 @@ position: absolute;
     justify-content: center;
     flex-shrink: 0;
 }
-
 /* 6. Сама анимация движения влево */
 @keyframes scroll-left {
     from {
         transform: translateX(0);
         /* Старт: полоса стоит на месте */
     }
-
     to {
         transform: translateX(-50%);
         /* Финиш: сдвигаем ровно на половину (на длину одного блока) */
     }
 }
-
 /* Основная часть */
-
 .hero-black {
-    padding-top: 94px;
-    position: relative;
     padding-top: 94px;
     position: relative;
     background-color: #202027;
     overflow: hidden;
 }
-
-
-
 .hero-black__title {
-    width: 314px;
+    
     height: 78px;
     font-weight: 700;
     font-size: 64px;
     line-height: 78px;
-    margin-bottom: 24px;
+    margin-bottom: 72px;
     color: #FFFFFF;
 }
-
 .hero-black__paragraph {
     width: 788px;
     font-weight: 400;
     font-size: 24px;
     line-height: 32px;
     color: #FFFFFF;
-
 }
-
 .hero-black__title-blok {
     margin-bottom: 72px;
 }
-
- .hero-black__blocs {
-    
-   display: grid;
+.hero-black__blocs {
+    display: grid;
     /* Создаем ровно 3 колонки одинаковой ширины */
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     /* Расстояние между карточками (и по горизонтали, и по вертикали) */
-    gap: 32px; 
+    gap: 32px;
     align-items: start;
     grid-template-rows: repeat(3, auto);
-    
-} 
-
+    position: relative;
+    z-index: 2;
+}
 .hero-black__img {
     margin-bottom: 32px;
     border-radius: 30px;
@@ -425,45 +283,37 @@ position: absolute;
     display: block;
     /* Убирает лишний отступ снизу у картинок */
 }
-
 .hero-black__number_1 {
     height: 473px;
     grid-row-start: 1;
     grid-row-end: 2;
 }
-
 .hero-black__number_2 {
     height: 512px;
     grid-row-start: 1;
     grid-row-end: 3;
 }
-
 .hero-black__number_3 {
     height: 473px;
     grid-row-start: 1;
     grid-row-end: 2;
 }
-
 .hero-black__number_4 {
     height: 551px;
     grid-row-start: 2;
     grid-row-end: 4;
 }
-
 .hero-black__number_5 {
     height: 512px;
     grid-row-start: 3;
     grid-row-end: 4;
 }
-
 .hero-black__number_6 {
     height: 551px;
     grid-row-start: 2;
     grid-row-end: 4;
 }
-
 .hero-black__mini-paragraph {
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -475,81 +325,151 @@ position: absolute;
     margin-bottom: 16px;
     font-size: 16px;
     margin-left: 32px;
-
 }
-
 .hero-black__big-paragraph {
     margin-bottom: 36px;
-
     width: 314px;
     height: 39px;
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
     line-height: 39px;
-
     color: #202027;
     margin-left: 32px;
-    
-
-
 }
-
 .hero-black__number {
     background-color: #FFFFFF;
     border-radius: 30px;
     overflow: hidden; /* Картинки будут идеально скругляться по углам карточки */
-    
-    
 }
-/* .hero-black__number_1 {
-    min-height: 473px;
-
-}
-.hero-black__number_2 {
-    min-height: 512px;
-
-} */
-
-
-
-
-
 .hero-black__mini-games {
-margin-top: 96px;
+    margin-top: 96px;
 }
 .hero-black__big-blocs-games {
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     gap: 32px;
-
 }
-
 .hero-black__paragrap1-mini-games {
-    
-width: 504px;
-height: 59px;
-
-font-weight: 700;
-font-size: 48px;
-line-height: 59px;
-
-
-color: #202027;
-
+    width: 504px;
+    height: 59px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: #202027;
+}
+.hero-black__paragrap-mini-games {
+    width: 457px;
+    height: 64px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #202027;
+}
+.hero-black__blocs-games {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 
 }
-.hero-black__paragrap-mini-games{
+.hero-black__big-blocs-games {
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+/* свойство меняет порядок для нечётных карточек */
+.hero-black__big-blocs-games:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.hero-black__game-img {
+    width: 50%;
+    /* картинка вписывается в заданный размер блока */
+    object-fit: cover; 
+    height: 500px;
+    /* Убирает возможный лишний отступ под картинкой*/
+    display: block;
+}
+
+.hero-black__content-games {
+    width: 50%;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
     
-width: 457px;
-height: 64px;
-font-weight: 400;
-font-size: 24px;
-line-height: 32px;
+}
+.hero-black__paragrap1-mini-games {
+    width: 100%;
+    height: auto;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: #202027;
+    margin-bottom: 24px;
+}
 
-color: #202027;
+.hero-black__paragrap-mini-games {
+    width: 100%;
+    height: auto;
+    max-width: 457px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #202027;
+    margin-bottom: 36px;
 
+}
+.button-play {
+    width: 247px;
+    height: 66px;
+    background: #202027;
+    border: 1px solid #202027;
+    border-radius: 60px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 141.69%;
+    
+
+}
+
+.button-play:hover {
+    background-color: #FFFFFF;
+    color: #202027;
+}
+
+/* Footer */
+
+.hero-black__footer {
+ 
+margin-top: 144px;
+    background-color: #BCEC30;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: calc(600px - 50vw);
+    margin-right: calc(600px - 50vw);
+
+}
+.hero-black__footer-paragraph {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+}
+.hero-black__mini-games_star1{
+    right: 44px;
+   
+
+}
+
+.hero-black__mini-games_star2{
+    right: 44px;
+    bottom: 195px;
 }
