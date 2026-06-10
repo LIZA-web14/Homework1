@@ -87,6 +87,12 @@ h1, h2, h3, h4, h5, h6 {
     /* Устанавливаем обычную жирность */
     font-weight: 400;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+
 .center {
     padding-left: calc(50% - 600px);
     padding-right: calc(50% - 600px);
@@ -339,10 +345,29 @@ body {
     margin-left: 32px;
 }
 .hero-black__number {
+     display: block;/* делает ссылку блочным элементом, чтобы она заняла всю карточку */
     background-color: #FFFFFF;
     border-radius: 30px;
     overflow: hidden; /* Картинки будут идеально скругляться по углам карточки */
+    text-decoration: none; /*убирает подчёркивание у ссылки */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    color: inherit; /* наследует цвет текста от родителя, чтобы ссылка не стала синей */
+
 }
+.hero-black__number:hover {
+    transform: scale(1.05);
+    z-index: 2; }
+
+.hero-black__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
 .hero-black__mini-games {
     margin-top: 96px;
 }
@@ -392,9 +417,12 @@ body {
     width: 50%;
     /* картинка вписывается в заданный размер блока */
     object-fit: cover; 
-    height: 500px;
+   height: 500px; 
     /* Убирает возможный лишний отступ под картинкой*/
-    display: block;
+     display: block; 
+    
+   
+
 }
 
 .hero-black__content-games {
@@ -463,13 +491,19 @@ margin-top: 144px;
     text-align: center;
     color: #000000;
 }
-.hero-black__mini-games_star1{
-    right: 44px;
-   
 
+
+.hero-black__mini-games-star {
+    position: absolute;
+    z-index: 1;
 }
 
-.hero-black__mini-games_star2{
+.hero-black__mini-games-star--1 {
+    right: 44px;
+    top: 0;
+}
+
+.hero-black__mini-games-star--2 {
     right: 44px;
     bottom: 195px;
 }
