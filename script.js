@@ -26,7 +26,13 @@ let a = 10;
 let b = 2;
 
 let sum = a + b; 
-alert sum()
+alert(sum);
 
+////// Задание 5 //////
+
+
+
+let result  = 2 ** 5;
+alert (result);
 
 
