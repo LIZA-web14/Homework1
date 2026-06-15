@@ -13,3 +13,8 @@ alert(20);
 
 let iphoneFirstReleaseYear = 2007;
 alert(iphoneReleaseYear);
+
+////// Задание 3 //////
+
+let jsCreatorName = "Брендан Эйх";
+alert(jsCreatorName);
