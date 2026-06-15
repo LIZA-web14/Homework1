@@ -30,9 +30,14 @@ alert(sum);
 
 ////// Задание 5 //////
 
-
-
 let result  = 2 ** 5;
 alert (result);
+
+////// Задание 6 //////
+
+let variablesA = 9;
+let variablesB = 2;
+let remainder = variablesA % variablesB; 
+alert (remainder);
 
 
