@@ -117,6 +117,16 @@ body {
     right: 0px;
     right: -480px;
 }
+.hero__mobile-star1{
+    display: none;
+}
+.hero__mobile-star{
+    display: none;
+}
+.hero__mobile-star3{
+    display: none;
+}
+
 .hero__blok-mini-star {
     top: 69px;
     position: absolute;
@@ -476,12 +486,14 @@ body {
 
 .hero-black__footer {
  
-margin-top: 144px;
+ margin-top: 144px;
     background-color: #BCEC30;
     padding-top: 60px;
     padding-bottom: 60px;
-    margin-left: calc(600px - 50vw);
-    margin-right: calc(600px - 50vw);
+
+    /* Растягивает футер на всю ширину экрана */
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
 
 }
 .hero-black__footer-paragraph {

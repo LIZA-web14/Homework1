@@ -1,0 +1,198 @@
+
+
+
+@media (max-width: 767px)
+{
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+   .hero__blok {
+    text-align: center;
+    padding-top: 147px;
+    padding-bottom: 131px;
+   }
+      .hero__title {
+    font-size: 40px;
+    line-height: 120%;   /* Изменила со 100% на 120% (или 49px), чтобы буквы разных строк не нализали друг на друга */
+    max-width: 290px;     /* Ограничиваем ширину, чтобы текст переносился строго по макету */
+    margin: 0 auto 24px;  /* Центрируем заголовок на экране и делаем отступ 24px снизу к абзацу */
+   }
+   .hero__paragraph {
+    /* margin-bottom: 36px;
+    font-size: 16px;
+    line-height: 100%; */
+    width: 100%;
+    max-width: 296px;
+    height: auto;
+    margin: 0 auto 36px;
+    font-size: 16px;
+    line-height: 20px;
+
+   }
+.hero__accent{
+    font-size: 16px;
+   
+}
+.button {
+    font-size: 16px;
+
+}
+
+/* звезды */
+.hero__blok-big-star,
+.hero__blok-star {
+    display: none;
+
+}
+
+/* --- Бегущая строка (games-line) --- */
+    .games-line {
+        padding: 16px 0;
+    }
+    .games-line span {
+        font-size: 16px; /* Уменьшаем шрифт бегущей строки */
+    }
+    .games-line__content {
+        gap: 24px;
+        padding-right: 24px;
+    }
+    .star svg {
+        width: 20px;
+        height: 20px;
+    }
+    /* звезды две (второй блок) */
+    .hero-black__mini-games-star--1,
+    .hero-black__star_size_large,
+    .hero-black__mini-games-star--2 {
+        display:  none;
+
+    }
+    .hero-black__about-games {
+        display: none;
+
+    }
+    /* 
+       Основной тёмный блок с мини-играми.
+       На мобильной версии убираем верхний отступ,
+       чтобы секция начиналась сразу после бегущей строки.
+    */
+    .hero-black{
+        padding-top: 0px;
+    }
+
+    /*
+       Блок, внутри которого находится заголовок "Мини-игры"
+       и карточки игр.
+       Убираем большой верхний отступ, который был на десктопе.
+    */
+    .hero-black__mini-games {
+        margin-top: 0;
+        
+    }
+    .hero-black__mini-games .hero-black__title {
+        font-size: 40px;
+        line-height: 49px;
+        margin-bottom: 48px;
+        margin-top: 48px;
+
+    }
+    .hero-black__blocs-games {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+    }
+    /* Сама карточка игры (делаем вертикальной) */
+    .hero-black__big-blocs-games,
+    .hero-black__big-blocs-games:nth-child(odd) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+        border-radius: 30px;
+        overflow: hidden;
+        background-color: #FFFFFF;
+        gap: 0;
+    }
+    /* Картинка внутри карточки */
+    .hero-black__game-img {
+        width: 100%;
+        height: 284px;
+        object-fit: cover;
+        display: block;
+        border-radius: 30px;
+    }
+    /* Текстовая часть внутри карточки */
+    .hero-black__content-games {
+        width: 100%;
+        padding: 29px 29px 29px;
+        display: flex;
+        flex-direction: column;
+    }
+    /* Заголовок игры */
+    .hero-black__paragrap1-mini-games {
+        width: 100%;
+        height: auto;
+        font-size: 32px;
+        line-height: 39px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #202027;
+    }
+     .hero-black__paragrap-mini-games {
+        width: 100%;
+        height: auto;
+        max-width: none;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 32px;
+        color: #202027;
+   
+    }
+     /* Кнопка "Играть!" */
+    .button-play {
+        width: 100%;
+        height: 55px;
+        font-size: 16px;
+        line-height: 141.69%;
+        border-radius: 60px;
+    }
+    .hero-black__footer {
+    margin-top: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.hero-black__footer-paragraph {
+    font-size: 16px;
+    line-height: 20px;
+}
+.hero__mobile-star {
+        display: block;
+        position: absolute;
+       
+       right: 0;
+        z-index: 1;
+    }
+.hero__mobile-star1 {
+    display: block;
+        position: absolute;
+       left: 37px;
+       top: 64px;
+        z-index: 1;
+
+}    
+.hero__mobile-star3 {
+     display: block;
+        position: absolute;
+       right: 34px;
+       bottom: 28px;
+        z-index: 1;
+}
+
+    
+
+}
+
