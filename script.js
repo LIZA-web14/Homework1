@@ -1,4 +1,4 @@
-////// 1//////
+////// Задание 1 //////
 
 //  Создаем переменную a и записываем значение 10
 let a = 10;
@@ -9,7 +9,7 @@ a = 20;
 // Выводим обновленное значение (20) на экран
 alert(20);
 
-//////2//////
+////// Задание 2 //////
 
 let iphoneFirstReleaseYear = 2007;
 alert(iphoneReleaseYear);
@@ -18,3 +18,15 @@ alert(iphoneReleaseYear);
 
 let jsCreatorName = "Брендан Эйх";
 alert(jsCreatorName);
+
+////// Задание 4 //////
+
+let a = 10;
+
+let b = 2;
+
+let sum = a + b; 
+alert sum()
+
+
+
