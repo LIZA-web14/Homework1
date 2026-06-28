@@ -21,20 +21,20 @@ alert(jsCreatorName);
 
 ////// Задание 4 //////
 
-let a = 10;
+let A = 10;
 
 let b = 2;
 
 let sum = a + b; 
 alert(sum);
 
-let difference = a - b; 
+let difference = A - b; 
 alert(difference);
 
-let product = a * b; 
+let product = A * b; 
 alert(product);
 
-let quotient = a / b; 
+let quotient = A / b; 
 alert(quotient);
 
 ////// Задание 5 //////
