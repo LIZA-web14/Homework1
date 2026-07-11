@@ -182,59 +182,159 @@
 
 // }
 
-// Задание 5
-let n = 1000;
+// // Задание 5
+// let n = 1000;
 
-let num = 0; // Переменная для подсчета количества итераций
+// let num = 0; // Переменная для подсчета количества итераций
 
-while (n >= 50) {
-    n = n / 2; // Делим число на 2
-    num++;     // Увеличиваем счетчик шагов на 1
+// while (n >= 50) {
+//     n = n / 2; // Делим число на 2
+//     num++;     // Увеличиваем счетчик шагов на 1
+// }
+// // Задание 6
+// console.log("Полученное число n =", n);
+// console.log("Количество итераций num =", num);
+// let firstFriday = 3;
+// let totalDays = 31;
+// while (firstFriday <= 31) {
+//     firstFriday += 7;
+//     console.log (`Сегодня пятница, ${firstFriday}-е число. Необходимо подготовить отчет.`)
+
+// }
+// // Задание 7
+// let k = 100;
+// let iterations = 0;
+// while (k >= 0){
+//     k -= 7;
+//     iterations++;
+// }
+// // Задание 8
+// let month = [
+//     "январь",
+//     "февраль",
+//     "март",
+//     "апрель",
+//     "май",
+//     "июнь",
+//     "июль",
+//     "август",
+//     "сентябрь",
+//     "октябрь",
+//     "ноябрь",
+//     "декабрь"];
+
+//     for (let i =0; i < 12; i++ )
+//     { console.log(`${i + 1}-й месяц года ${month[i]}`)}
+
+
+//   //Задание 10
+//   const book = {
+//     "название": 'Война и мир',
+//     "автор": 'Л.Н. Толстой',
+//     "год издания": '1863', 
+//     "жанр": 'роман-эпопея',
+//   } 
+//   for (let key in book) {
+// console.log(`${key}: ${book[key]}`);}
+
+// //Функции///
+//Задание 1
+
+// function getMin(a, b) {
+//     if (a < b) {
+//       return a ;
+//     } else {
+//         return b;
+//     }
+// }
+//Задание 2
+function evenOdd(number) {
+    if (number % 2 == 0) {
+        alert("Четное число")
+    } else {
+        alert("Нечетное число")
+    }
 }
-// Задание 6
-console.log("Полученное число n =", n);
-console.log("Количество итераций num =", num);
-let firstFriday = 3;
-let totalDays = 31;
-while (firstFriday <= 31) {
-    firstFriday += 7;
-    console.log (`Сегодня пятница, ${firstFriday}-е число. Необходимо подготовить отчет.`)
+
+let userNum = prompt("Введите число: ")
+evenOdd(userNum)
+//Задание 3
+function squared(number) {
+    let squarNum = number ** 2;
+    console.log(squarNum)
+}
+function squared2(number) {
+     let squarNum = number ** 2;
+    return squarNum
 
 }
-// Задание 7
-let k = 100;
-let iterations = 0;
-while (k >= 0){
-    k -= 7;
-    iterations++;
+
+//Задание 4
+function name() {   
+    let age = prompt("сколько вам лет?")
+    if (age < 0) {
+        console.log("Вы ввели неправильное значение")
+    } else if (age <= 12) {
+            console.log("Привет, друг!")
+        } else {
+            console.log ("Добро пожаловать!")
+        }
+    }
+
+    //Задание 5
+function multiplyIfNumbers(a, b) {
+  a = +a;   
+  b = +b;
+
+  if (isNaN(a) || isNaN(b)) {
+    return 'Одно или оба значения не являются числом';
+  }
+  return a * b;
 }
-// Задание 8
-let month = [
-    "январь",
-    "февраль",
-    "март",
-    "апрель",
-    "май",
-    "июнь",
-    "июль",
-    "август",
-    "сентябрь",
-    "октябрь",
-    "ноябрь",
-    "декабрь"];
 
-    for (let i =0; i < 12; i++ )
-    { console.log(`${i + 1}-й месяц года ${month[i]}`)}
+//Задание 6
+function isNumber(userNum = prompt("Введите число:")) {
+    let number = Number(userNum)
+    if (Number.isNaN(number)) {
+        console.log("Переданный параметр не является числом.")
+    } else {
+        console.log(`${number} в кубе равняется ${number ** 3}`)
+    }
+}
 
+let i = 0
+while (i <= 10) {
+    isNumber(i)
+    i++
+}
 
-  //Задание 10
-  const book = {
-    "название": 'Война и мир',
-    "автор": 'Л.Н. Толстой',
-    "год издания": '1863', 
-    "жанр": 'роман-эпопея',
-  } 
-  for (let key in book) {
-console.log(`${key}: ${book[key]}`);}
+//Задание 7
+const circle1 = {
+    radius: +prompt("Введите радиус первого круга:"),
+    getArea: function() {
+        let square = 3.14 * this.radius ** 2
+        return square
+    },
+    getPerimeter: function() {
+        let p = 2 * 3.14 * this.radius
+        return p
+    }
+}
 
-//Задание 11
+const circle2 = {
+    radius: +prompt("Введите радиус второго круга:"),
+    getArea: function() {
+        let square = 3.14 * this.radius ** 2
+        return square
+    },
+    getPerimeter: function() {
+        let p = 2 * 3.14 * this.radius
+        return p
+    }
+}
+
+console.log(`Площади первого круга: ${circle1.getArea()}`)
+console.log(`Периметр первого круга: ${circle1.getPerimeter()}`)
+
+console.log(`Площади второго круга: ${circle2.getArea()}`)
+console.log(`Периметр второго круга: ${circle2.getPerimeter()}`)
