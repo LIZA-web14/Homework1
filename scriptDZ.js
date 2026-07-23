@@ -248,93 +248,403 @@
 //     }
 // }
 //Задание 2
-function evenOdd(number) {
-    if (number % 2 == 0) {
-        alert("Четное число")
-    } else {
-        alert("Нечетное число")
+// function evenOdd(number) {
+//     if (number % 2 == 0) {
+//         alert("Четное число")
+//     } else {
+//         alert("Нечетное число")
+//     }
+// }
+
+// let userNum = prompt("Введите число: ")
+// evenOdd(userNum)
+// //Задание 3
+// function squared(number) {
+//     let squarNum = number ** 2;
+//     console.log(squarNum)
+// }
+// function squared2(number) {
+//      let squarNum = number ** 2;
+//     return squarNum
+
+// }
+
+// //Задание 4
+// function name() {   
+//     let age = prompt("сколько вам лет?")
+//     if (age < 0) {
+//         console.log("Вы ввели неправильное значение")
+//     } else if (age <= 12) {
+//             console.log("Привет, друг!")
+//         } else {
+//             console.log ("Добро пожаловать!")
+//         }
+//     }
+
+//     //Задание 5
+// function multiplyIfNumbers(a, b) {
+//   a = +a;   
+//   b = +b;
+
+//   if (isNaN(a) || isNaN(b)) {
+//     return 'Одно или оба значения не являются числом';
+//   }
+//   return a * b;
+// }
+
+// //Задание 6
+// function isNumber(userNum = prompt("Введите число:")) {
+//     let number = Number(userNum)
+//     if (Number.isNaN(number)) {
+//         console.log("Переданный параметр не является числом.")
+//     } else {
+//         console.log(`${number} в кубе равняется ${number ** 3}`)
+//     }
+// }
+
+// let i = 0
+// while (i <= 10) {
+//     isNumber(i)
+//     i++
+// }
+
+// //Задание 7
+// const circle1 = {
+//     radius: +prompt("Введите радиус первого круга:"),
+//     getArea: function() {
+//         let square = 3.14 * this.radius ** 2
+//         return square
+//     },
+//     getPerimeter: function() {
+//         let p = 2 * 3.14 * this.radius
+//         return p
+//     }
+// }
+
+// const circle2 = {
+//     radius: +prompt("Введите радиус второго круга:"),
+//     getArea: function() {
+//         let square = 3.14 * this.radius ** 2
+//         return square
+//     },
+//     getPerimeter: function() {
+//         let p = 2 * 3.14 * this.radius
+//         return p
+//     }
+// }
+
+// console.log(`Площади первого круга: ${circle1.getArea()}`)
+// console.log(`Периметр первого круга: ${circle1.getPerimeter()}`)
+
+// console.log(`Площади второго круга: ${circle2.getArea()}`)
+// console.log(`Периметр второго круга: ${circle2.getPerimeter()}`)
+
+
+
+// Задание 1
+// Дан массив: 
+// [1, 5, 4, 10, 0, 3]
+// .
+
+// Создайте цикл, который будет выводить элементы массива до тех пор, пока не встретит значение 10
+// . После вывода значения 10 в консоль цикл должен прекратить свою работу.
+// 
+// const array = [1, 5, 4, 10, 0, 3];
+// for (let i in array) {
+//     console.log(array[i])
+//     if (array[i] === 10) {
+//         break
+//     }
+// }
+
+//  for (let i = 0; i < array.length; i++){
+//      console.log(array[i])  
+//  if(array[i] === 10){
+//      break
+//  }
+//  }
+ 
+ 
+
+// // Задание 2
+// // Дан массив: 
+// // [1, 5, 4, 10, 0, 3].
+
+// // Найдите индекс значения  4 в этом массиве.
+
+// const array = [1, 5, 4, 10, 0, 3]
+//  for (let i = 0; i < array.length; i++){
+  
+//  if(array[i] === 4){
+//     console.log(`Индекс значения 4: ${i}`)
+//      break
+//  }
+//  }
+
+// //  Задание 3
+// // Дан массив чисел: 
+// // [1, 3, 5, 10, 20]
+// // .
+
+// // С помощью метода 
+// // join
+// //  выведите элементы массива через пробел (пустую строку 
+// // ' '
+// // ).
+
+// const array = [1, 3, 5, 10, 20]
+// let newString = array.join(' ')
+// console.log(newSDd)
+
+// // Задание 4
+// // С помощью вложенных циклов создайте многомерный массив вида: 
+// // [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+// // .
+
+// const array = []
+
+// for (i = 0; i < 3; i++) {
+//     const iArray = []
+
+//     for (j = 0; j < 3; j++) {
+//         iArray.push(1)
+//     }
+//     array.push(iArray)
+// }
+
+// console.log(array)
+
+// // Задание 5
+// // Дан массив: 
+// // [1, 1, 1]
+// // . Добавьте в конец массива значения 2, 2, 2.
+
+// const numbers = [1, 1, 1]
+// console.log(numbers)
+// for ( i = 0; i < 3; i++ ) {
+//   numbers.push(2)
+// }
+// console.log(numbers)
+
+
+// // Задание 6
+// // Дан массив: 
+// // [9, 8, 7, 'a', 6, 5]
+// // .
+
+// // С помощью метода 
+// // sort
+// //  отсортируйте массив и удалите букву 
+// // 'a'
+// //  из массива. Затем выведите массив.
+
+// const numbers = [9, 8, 7, 'a', 6, 5];
+// const filterNumber = numbers.filter (num =>  typeof num === 'number' );
+// console.log(filterNumber);
+// const sortNumber = filterNumber.sort((a, b) => a - b );
+// console.log(sortNumber);
+
+// // Задание 7
+// // Дан массив: 
+// // [9, 8, 7, 6, 5]
+// // .
+
+// // Попросите пользователя угадать число с помощью метода 
+// // prompt
+// // . Если значение, которое ввел пользователь, есть в массиве, выведите в 
+// // alert
+// //  «Угадал», в противном случае — «Не угадал».
+
+// const numbers = [9, 8, 7, 6, 5];
+// let ask = Number(prompt('Угадай число:)'))
+// if(numbers.includes(ask)) {
+//    alert('Угадал :D');
+
+// }
+// else{
+//     alert('Не угадал :((( ');
+// }
+// // Задание 8
+// // Дана строка: 
+// // 'abcdef'
+// // . Выведите в консоль 
+// // 'fedcba'
+// // .
+
+// // Для этого задания вам пригодится метод 
+// // reverse()
+// // . Он располагает элементы массива в порядке, обратном исходному.
+
+// let line = ('abcdef')
+// const arrayLine = line.split('')
+// console.log(arrayLine)
+// const reverseLine = arrayLine.reverse(' ').join('')
+// console.log(reverseLine)
+
+// // Задание 9
+// // Дан массив: 
+// // [[1, 2, 3],[4, 5, 6]]
+// // . Выведите в консоль массив вида: 
+// // [1, 2, 3, 4, 5, 6]
+// // .
+
+
+
+
+// const bigArray = [[1, 2, 3], [4, 5, 6]];
+// const miniArray = [...bigArray[0],...bigArray[1] ];
+// console.log(miniArray)
+
+// // Задание 10
+// // Создайте массив с произвольными числами (диапазон от 
+// // 1
+// //  до 
+// // 10
+// // ).
+// // Переберите его с помощью цикла 
+// // for
+// // .
+// // В каждой итерации выведите в консоль сумму текущего и следующего элементов массива.
+// // Следующий элемент массива можно получить с помощью индекса: 
+// // i + 1
+// // . Обратите внимание, что у последнего элемента нет следующего.
+// const bigArray = [];
+// for (i = 0; i <= 10; i++ ) {
+//     let number = Math.floor(Math.random() * 10) + 1;
+//     bigArray.push(number)
+// }
+
+// console.log(`Наш массив: ${bigArray}\n`)
+
+// for(i = 0; i < bigArray.length - 1; i++) {
+//     console.log(`${i} элемент массива: ${bigArray[i]}`)
+    
+//     let sum = bigArray[i] + bigArray[i + 1]
+
+//     console.log(`Текущий элемент: ${bigArray[i]}`)
+//     console.log(`Следующий элемент: ${bigArray[i + 1]}`)
+//     console.log(`Сумма элементов: ${sum}\n`)
+// }
+
+// // Задание 11
+// // Создайте функцию, которая принимает на вход массив целых чисел, 
+// // а возвращает массив квадратов этих чисел.
+
+// function squares(array) {
+//     const squaresNums = array.map(num => num ** 2)
+//     return squaresNums
+// }
+
+// const numbers1 = [2, 4, 5, 7, 8, 9]
+// const numbers2 = [3, 4, 11, 7, -4, 9]
+// const numbers3 = [7, 12, 5, 35, 8, 0]
+
+// console.log(squares(numbers3))
+
+// // Задание 12
+// // Создайте функцию, которая принимает на вход массив строк,
+// //  а возвращает массив длины слов.
+
+// function takeFunction (array) {
+//     const lenghtstrings = array.map(string => string.length)
+//     return lenghtstrings
+// }
+
+// const arrayStrings = ["Кот", "Хомяк", "Свин"]
+
+// console.log(takeFunction(arrayStrings))
+
+
+
+
+// // Задание 13
+// // Создайте функцию, которая принимает на вход массив целых чисел,
+// //  а возвращает массив, содержащий только отрицательные значения.
+// function takeFunction (array) {
+//     const arrayNumbers = array.filter ((num) => num < 0 );
+//     return arrayNumbers
+// }
+// const namber = [ -1, 0, -5, 10, -2]
+
+// console.log(takeFunction(namber))
+
+// // Задание 14
+// // Создайте массив, состоящий из 10 значений. Значения массива необходимо сгенерировать 
+// // с помощью метода 
+// // Math.random()
+// //  в диапазоне от 0 до 10.
+
+// // В данном массиве найдите все четные значения и добавьте их в новый массив. 
+// // Результат работы программы необходимо вывести в консоль — 
+// // это будут два массива: исходный массив и массив с четными значениями.
+// const numbers = [];
+
+// for (let i = 0; i < 10; i++) {
+//     const randomNumber = Math.floor(Math.random() * 11);
+//     numbers.push(randomNumber);
+// }
+
+// console.log(numbers);
+
+// const evenNumbers = numbers.filter((num) => num % 2 ===0);
+// console.log(evenNumbers)
+// // Задание 15
+// // Создайте массив, состоящий из 6 элементов. Элементы массива необходимо 
+// // сгенерировать с помощью Math.random()
+// //  в диапазоне от 1 до 10.
+
+// // Требуется найти среднее арифметическое этих цифр, 
+// // результат программы вывести в консоль.
+
+// const numbers =[];
+// for (let i = 1; i < 7; i++) {
+//     let number = Math.floor(Math.random() * 10) + 1;
+//     numbers.push(number)
+// }
+// let sum = 0;
+// for (let i = 0; i < numbers.length; i++) {
+//     sum = sum + numbers[i];
+   
+// }
+//     const average = sum / numbers.length;
+
+//     console.log('Сумма:', sum )
+//     console.log('Cреднее арифметическое', average)
+
+
+
+///////////////// Игра «Викторина»////////////////////////
+
+
+const quiz = [
+           {
+               question: "Какой цвет небо?",
+               options: ["1. Красный", " 2. Синий", " 3. Зеленый"],
+               correctAnswer: 2 // номер правильного ответа
+           },
+           {
+               question: "Сколько дней в неделе?",
+               options: ["1. Шесть", " 2. Семь", " 3. Восемь"],
+               correctAnswer: 2
+           },
+           {
+               question: "Сколько у человека пальцев на одной руке?",
+               options: ["1. Четыре", " 2. Пять", " 3. Шесть"],
+               correctAnswer: 2
+           }
+       ];
+
+let counter = 0;
+for (i = 0; i < quiz.length; i++) {
+
+    const answer = prompt(
+        `${quiz[i].question}\n${quiz[i].options}\nВыберете вариант ответа(цифра): `
+        )
+
+    if (answer == quiz[i].correctAnswer) {
+        counter = counter + 1
+        console.log("Молодец! Правильный ответ!")
     }
 }
 
-let userNum = prompt("Введите число: ")
-evenOdd(userNum)
-//Задание 3
-function squared(number) {
-    let squarNum = number ** 2;
-    console.log(squarNum)
-}
-function squared2(number) {
-     let squarNum = number ** 2;
-    return squarNum
-
-}
-
-//Задание 4
-function name() {   
-    let age = prompt("сколько вам лет?")
-    if (age < 0) {
-        console.log("Вы ввели неправильное значение")
-    } else if (age <= 12) {
-            console.log("Привет, друг!")
-        } else {
-            console.log ("Добро пожаловать!")
-        }
-    }
-
-    //Задание 5
-function multiplyIfNumbers(a, b) {
-  a = +a;   
-  b = +b;
-
-  if (isNaN(a) || isNaN(b)) {
-    return 'Одно или оба значения не являются числом';
-  }
-  return a * b;
-}
-
-//Задание 6
-function isNumber(userNum = prompt("Введите число:")) {
-    let number = Number(userNum)
-    if (Number.isNaN(number)) {
-        console.log("Переданный параметр не является числом.")
-    } else {
-        console.log(`${number} в кубе равняется ${number ** 3}`)
-    }
-}
-
-let i = 0
-while (i <= 10) {
-    isNumber(i)
-    i++
-}
-
-//Задание 7
-const circle1 = {
-    radius: +prompt("Введите радиус первого круга:"),
-    getArea: function() {
-        let square = 3.14 * this.radius ** 2
-        return square
-    },
-    getPerimeter: function() {
-        let p = 2 * 3.14 * this.radius
-        return p
-    }
-}
-
-const circle2 = {
-    radius: +prompt("Введите радиус второго круга:"),
-    getArea: function() {
-        let square = 3.14 * this.radius ** 2
-        return square
-    },
-    getPerimeter: function() {
-        let p = 2 * 3.14 * this.radius
-        return p
-    }
-}
-
-console.log(`Площади первого круга: ${circle1.getArea()}`)
-console.log(`Периметр первого круга: ${circle1.getPerimeter()}`)
-
-console.log(`Площади второго круга: ${circle2.getArea()}`)
-console.log(`Периметр второго круга: ${circle2.getPerimeter()}`)
+console.log(`Кол-во правильных ответов: ${counter} из 3`)
