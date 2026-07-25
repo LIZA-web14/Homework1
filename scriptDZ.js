@@ -616,7 +616,7 @@
 ///////////////// Игра «Викторина»////////////////////////
 
 
-const quiz = [
+ const quiz = [
            {
                question: "Какой цвет небо?",
                options: ["1. Красный", " 2. Синий", " 3. Зеленый"],
@@ -637,9 +637,23 @@ const quiz = [
 let counter = 0;
 for (i = 0; i < quiz.length; i++) {
 
-    const answer = prompt(
-        `${quiz[i].question}\n${quiz[i].options}\nВыберете вариант ответа(цифра): `
-        )
+    let answer = prompt(`${quiz[i].question}\n${quiz[i].options}\nВыберите вариант ответа (цифра): `);
+    let answerNum = Number(answer);
+
+
+    while (
+        answer === null ||
+        Number.isNaN(answerNum) ||
+        answerNum < 1 ||
+        answerNum > quiz[i].options.length
+    )  {
+        answer = prompt(
+        `Введите ЦИФРУ!\n` +
+        `${quiz[i].question}\n${quiz[i].options}\nВыберите вариант ответа (цифра): `
+        );
+        answerNum = Number(answer);
+        }
+    
 
     if (answer == quiz[i].correctAnswer) {
         counter = counter + 1
