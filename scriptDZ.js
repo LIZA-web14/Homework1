@@ -661,4 +661,235 @@ for (i = 0; i < quiz.length; i++) {
     }
 }
 
-console.log(`Кол-во правильных ответов: ${counter} из 3`)
+ alert(`Кол-во правильных ответов: ${counter} из 3`)
+
+
+// ////////////////Игра «Угадай число»//////////////////////////
+// Описание
+
+// Создайте игру, в которой пользователь пытается угадать случайное число от 1 до 100.
+
+// Требования:
+
+// Сгенерируйте случайное число от 1 до 100.
+// Предложите пользователю угадать это число.
+// Дайте подсказки: больше или меньше загаданное число.
+// Завершите игру, когда пользователь угадает число.
+// Для реализации случайного числа воспользуйтесь 
+// Math.random()
+const num =  Math.floor(Math.random() * 100) + 1;
+
+let isGuessed = false;
+while(!isGuessed) {
+    // Спрашиваем у пользователя число: 
+    let userGuess = Number(prompt("Угадайте число от 1 до 100"));
+    // Проверяем введеное число 
+    if (userGuess === num){
+        alert('Поздравляем! Вы угадали число!');
+        isGuessed = true;
+    }
+     else if (userGuess > num) {
+        alert("Вы ввели слишком большое число")
+    }
+    else if (userGuess < num){
+        alert('Загаданное число больше ');
+    }
+
+
+}
+
+//////////////////Игра "Простая арифметика"///////////////////////
+// Описание
+
+// Сайт генерирует случайные задачи на сложение, вычитание, умножение и деление.
+// Запрашивает у пользователя ответ.
+// Проверяет правильность ответа и выводит результат.
+// Последовательность действий
+//  Генерация задач:
+// Случайным образом создавайте арифметические задачи на сложение, вычитание, умножение и деление.
+// Например, задачи могут выглядеть так: "5 + 3", "10 - 2", "4 * 7", "20 / 4".
+//  Запрос ответа:
+// Запрашивайте у пользователя ответ на сгенерированную задачу.
+// Например, используя  функцию 
+// prompt()
+// .
+//  Проверка и вывод результата:
+// Проверьте правильность ответа пользователя.
+// Выведите результат проверки: верный ответ или ошибка.
+
+const num1 = Math.floor(Math.random() * 10) + 1;
+const num2 = Math.floor(Math.random() * 10) + 1;
+// нужно создать массив знаков операций 
+const operators = ['+', '-', '*', '/'];
+
+const randromOperators = Math.floor(Math.random() * operators.length);
+const operator = operators[randromOperators];
+
+// Вычисляем правильный ответ
+
+let correctAnswer = 0
+if (operator === '+') {
+    correctAnswer = num1 + num2;
+}
+else if (operator === '-') {
+    correctAnswer = num1 - num2;
+}
+else if (operator === '*') {
+    correctAnswer = num1 * num2;
+}
+else if (operator === '/') {
+    correctAnswer = Number((num1 / num2).toFixed(2));
+}
+
+// Спрашиваем ответ у пользователя и сравниваем
+let userAnswer = Number(prompt(`Сколько будет ${num1} ${operator} ${num2}?`));
+
+if (userAnswer === correctAnswer) {
+  alert('Верно! 🎉');
+} else {
+  alert(`Ошибка! Правильный ответ: ${correctAnswer}`);
+}
+
+// Игра «Переверни текст»
+// Описание
+
+// создайте игру, где пользователю нужно ввести текст, 
+// который будет перевернут.
+
+// Требования:
+
+// Сайт запрашивает у пользователя текст.
+// Сайт переворачивает введенный текст.
+// Сайт выводит перевернутый текст.
+let userGuestion = prompt("Введите текст, а я переверну его :D");
+let reversedUserGuestion = userGuestion.split("").reverse().join("");   
+alert(`Перевернутый текст: ${reversedUserGuestion}`)
+
+///////////////////////// Работа с кодом////////////////
+// Задание 1
+// Преобразовать строку 
+// 'js'
+//  в верхний регистр.
+let a = 'js';
+let result = a.toUpperCase();
+console.log(result)
+//  Задание 2
+// Создать функцию, которая принимает массив строк и строку. 
+// Функция должна вернуть новый массив, 
+// содержащий только те элементы первого массива, 
+// которые начинаются со второй строки. 
+// Регистр символов не влияет на результат.
+
+
+
+
+// Задание 3
+// Округлить число 32.58884:
+
+// До меньшего целого.
+// До большего целого.
+// До ближайшего целого.
+
+const num = 32.58884;
+const result1 = Math.floor(num);
+console.log(result1)
+
+const result2 = Math.ceil(num);
+console.log(result2)
+
+const result3 = Math.random(num);
+console.log(result3)
+
+// Задание 4
+// Найти минимальное и максимальное значения из чисел 
+// 52, 53, 49, 77, 21, 32 и вывести их в консоль.
+
+const number = [52, 53, 49, 77, 21, 32];
+const min = Math.min(...number); // Троеточие распаковывает массив
+const max = Math.max(...number);
+
+console.log("Минимальное значение: ${min}");
+console.log("Махсимальное значение: ${max}");
+// Задание 5
+// Создать функцию, которая выводит в консоль случайное число от 1 до 10.
+
+function randomNumber(){
+    const random = Math.floor(Math.random() * 10) + 1;
+    console.log(random);
+}
+randomNumber();
+
+// Задание 6
+// Написать функцию, которая принимает целое число и возвращает массив 
+// случайных чисел 
+// от 0 до этого числа. Длина массива должна быть в два раза меньше 
+// переданного числа.
+
+
+
+function getRandomArray(n) {
+  const length = Math.floor(n / 2); 
+  const result = [];                 
+
+  
+  for (let i = 0; i < length; i++) {
+    
+    const randomNumber = Math.floor(Math.random() * (n + 1));
+    
+    
+    result.push(randomNumber);
+  }
+
+  return result; // 
+}
+
+// Проверяем 
+console.log(getRandomArray(10)); 
+console.log(getRandomArray(6));  
+// Задание 7
+// Создать функцию, которая принимает два целых числа и 
+// возвращает случайное число 
+// в этом диапазоне.
+function acceptsNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min; 
+}
+
+console.log(acceptsNumber(1, 10)); // Выведет случайное число от 1 до 10
+
+// Задание 8
+// Вывести в консоль текущую дату.
+let date = new Date();
+console.log(date)
+
+// Задание 9
+// Создать переменную 
+// currentDate
+// , хранящую текущую дату. 
+// Вывести дату, которая наступит через 73 дня после текущей.
+let currentDate = new Date();
+ currentDate.setDate(currentDate.getDate() + 73);
+ 
+console.log(currentDate);
+
+console.log(currentDate.toLocaleDateString('ru-RU'));
+
+// Задание 10
+// Написать функцию, которая принимает дату и возвращает ее в формате:
+
+
+// Дата: [число] [месяц на русском] [год] — это [день недели на русском].
+// Время: [часы]:[минуты]:[секунды]
+
+function acceptsDate(date) {
+    // 1. Исправили кавычки
+    let dayMonthYear = date.toLocaleDateString("ru-RU", { day: 'numeric', month: 'long', year: 'numeric' });
+    
+    let weekday = date.toLocaleDateString('ru-RU', { weekday: 'long' });
+    let time = date.toLocaleTimeString("ru-RU");
+
+    // 2. Исправили & на $
+    return `Дата: ${dayMonthYear} — это ${weekday}.\nВремя: ${time}.`;
+}
+
+// 3. Вызываем функцию с правильным именем acceptsDate
+console.log(acceptsDate(new Date()));
