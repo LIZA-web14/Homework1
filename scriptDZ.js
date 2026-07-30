@@ -615,8 +615,7 @@
 
 ///////////////// Игра «Викторина»////////////////////////
 
-
- const quiz = [
+    const guiz = [
            {
                question: "Какой цвет небо?",
                options: ["1. Красный", " 2. Синий", " 3. Зеленый"],
@@ -634,10 +633,12 @@
            }
        ];
 
-let counter = 0;
-for (i = 0; i < quiz.length; i++) {
 
-    let answer = prompt(`${quiz[i].question}\n${quiz[i].options}\nВыберите вариант ответа (цифра): `);
+function guiz5(){
+let counter = 0;
+for (i = 0; i < guiz.length; i++) {
+
+    let answer = prompt(`${guiz[i].question}\n${guiz[i].options}\nВыберите вариант ответа (цифра): `);
     let answerNum = Number(answer);
 
 
@@ -645,17 +646,17 @@ for (i = 0; i < quiz.length; i++) {
         answer === null ||
         Number.isNaN(answerNum) ||
         answerNum < 1 ||
-        answerNum > quiz[i].options.length
+        answerNum > guiz[i].options.length
     )  {
         answer = prompt(
         `Введите ЦИФРУ!\n` +
-        `${quiz[i].question}\n${quiz[i].options}\nВыберите вариант ответа (цифра): `
+        `${guiz[i].question}\n${guiz[i].options}\nВыберите вариант ответа (цифра): `
         );
         answerNum = Number(answer);
         }
     
 
-    if (answer == quiz[i].correctAnswer) {
+    if (answer == guiz[i].correctAnswer) {
         counter = counter + 1
         console.log("Молодец! Правильный ответ!")
     }
@@ -663,6 +664,8 @@ for (i = 0; i < quiz.length; i++) {
 
  alert(`Кол-во правильных ответов: ${counter} из 3`)
 
+}
+ document.getElementById('AsimpleGuiz').addEventListener('click',guiz5 )
 
 // ////////////////Игра «Угадай число»//////////////////////////
 // Описание
@@ -773,6 +776,7 @@ alert(`Перевернутый текст: ${reversedUserGuestion}`)
 let a = 'js';
 let result = a.toUpperCase();
 console.log(result)
+
 //  Задание 2
 // Создать функцию, которая принимает массив строк и строку. 
 // Функция должна вернуть новый массив, 
@@ -782,7 +786,13 @@ console.log(result)
 
 
 
+function test (arrayStrings, string){
+    const newArray = arrayStrings.filter(x => x.startsWith(string))
+    return newArray
+}
 
+const test_array = ['привет', 'черт', 'машина', 'пруссия', 'товар']
+console.log(test(test_array, 'пр'))
 // Задание 3
 // Округлить число 32.58884:
 
@@ -881,15 +891,15 @@ console.log(currentDate.toLocaleDateString('ru-RU'));
 // Время: [часы]:[минуты]:[секунды]
 
 function acceptsDate(date) {
-    // 1. Исправили кавычки
+    
     let dayMonthYear = date.toLocaleDateString("ru-RU", { day: 'numeric', month: 'long', year: 'numeric' });
     
     let weekday = date.toLocaleDateString('ru-RU', { weekday: 'long' });
     let time = date.toLocaleTimeString("ru-RU");
 
-    // 2. Исправили & на $
+    
     return `Дата: ${dayMonthYear} — это ${weekday}.\nВремя: ${time}.`;
 }
 
-// 3. Вызываем функцию с правильным именем acceptsDate
+ 
 console.log(acceptsDate(new Date()));
