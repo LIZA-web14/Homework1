@@ -21,9 +21,15 @@
 
 function guiz5(){
 let counter = 0;
-for (i = 0; i < guiz.length; i++) {
+for ( let i = 0; i < guiz.length; i++) {
 
     let answer = prompt(`${guiz[i].question}\n${guiz[i].options}\nВыберите вариант ответа (цифра): `);
+    if (answer === null) {
+      alert(`Игра завершена. Кол-во правильных ответов: ${counter} из ${guiz.length}`);
+      return;
+    }
+
+    
     let answerNum = Number(answer);
 
 
@@ -41,7 +47,7 @@ for (i = 0; i < guiz.length; i++) {
         }
     
 
-    if (answer == guiz[i].correctAnswer) {
+    if (answerNum == guiz[i].correctAnswer) {
         counter = counter + 1
         console.log("Молодец! Правильный ответ!")
     }
@@ -65,30 +71,37 @@ for (i = 0; i < guiz.length; i++) {
 // Завершите игру, когда пользователь угадает число.
 // Для реализации случайного числа воспользуйтесь 
 // Math.random()
-function guiz1 (){
-    const num =  Math.floor(Math.random() * 100) + 1;
 
-let isGuessed = false;
-while(!isGuessed) {
-    // Спрашиваем у пользователя число: 
-    let userGuess = Number(prompt("Угадайте число от 1 до 100"));
-    // Проверяем введеное число 
-    if (userGuess === num){
-        alert('Поздравляем! Вы угадали число!');
-        isGuessed = true;
-    }
-     else if (userGuess > num) {
-        alert("Вы ввели слишком большое число")
-    }
-    else if (userGuess < num){
-        alert('Загаданное число больше ');
+function guiz1() {
+  const num = Math.floor(Math.random() * 100) + 1;
+  let isGuessed = false;
+
+  while (!isGuessed) {
+    const input = prompt("Угадайте число от 1 до 100");
+
+    if (input === null) {
+      alert("Игра отменена");
+      return;
     }
 
+    const userGuess = Number(input);
 
+    if (Number.isNaN(userGuess)) {
+      alert("Введите число");
+      continue;
+    }
+
+    if (userGuess === num) {
+      alert("Поздравляем! Вы угадали число!");
+      isGuessed = true;
+    } else if (userGuess > num) {
+      alert("Вы ввели слишком большое число");
+    } else {
+      alert("Загаданное число больше");
+    }
+  }
 }
-}
 
-document.getElementById('GuessNumber').addEventListener('click',guiz1 )
 
 //////////////////Игра "Простая арифметика"///////////////////////
 // Описание
@@ -108,59 +121,50 @@ document.getElementById('GuessNumber').addEventListener('click',guiz1 )
 //  Проверка и вывод результата:
 // Проверьте правильность ответа пользователя.
 // Выведите результат проверки: верный ответ или ошибка.
-function guiz2 (){
-    const num1 = Math.floor(Math.random() * 10) + 1;
-const num2 = Math.floor(Math.random() * 10) + 1;
-// нужно создать массив знаков операций 
-const operators = ['+', '-', '*', '/'];
+function guiz2() {
+  const num1 = Math.floor(Math.random() * 10) + 1;
+  const num2 = Math.floor(Math.random() * 10) + 1;
 
-const randromOperators = Math.floor(Math.random() * operators.length);
-const operator = operators[randromOperators];
+  const operators = ['+', '-', '*', '/'];
+  const randomOperatorIndex = Math.floor(Math.random() * operators.length);
+  const operator = operators[randomOperatorIndex];
 
-// Вычисляем правильный ответ
+  let correctAnswer = 0;
 
-let correctAnswer = 0
-if (operator === '+') {
+  if (operator === '+') {
     correctAnswer = num1 + num2;
-}
-else if (operator === '-') {
+  } else if (operator === '-') {
     correctAnswer = num1 - num2;
-}
-else if (operator === '*') {
+  } else if (operator === '*') {
     correctAnswer = num1 * num2;
-}
-else if (operator === '/') {
+  } else if (operator === '/') {
     correctAnswer = Number((num1 / num2).toFixed(2));
+  }
+
+  const input = prompt(`Сколько будет ${num1} ${operator} ${num2}?`);
+
+  if (input === null) {
+    alert("Игра отменена");
+    return;
+  }
+
+  if (input.trim() === "") {
+    alert("Введите ответ");
+    return;
+  }
+
+  const userAnswer = Number(input);
+
+  if (Number.isNaN(userAnswer)) {
+    alert("Введите число");
+    return;
+  }
+
+  if (userAnswer === correctAnswer) {
+    alert("Верно! 🎉");
+  } else {
+    alert(`Ошибка! Правильный ответ: ${correctAnswer}`);
+  }
 }
 
-// Спрашиваем ответ у пользователя и сравниваем
-let userAnswer = Number(prompt(`Сколько будет ${num1} ${operator} ${num2}?`));
-
-if (userAnswer === correctAnswer) {
-  alert('Верно! 🎉');
-} else {
-  alert(`Ошибка! Правильный ответ: ${correctAnswer}`);
-}
-}
-document.getElementById('simpleArithmetic').addEventListener('click',guiz2)
-
-
-// Игра «Переверни текст»
-// Описание
-
-// создайте игру, где пользователю нужно ввести текст, 
-// который будет перевернут.
-
-// Требования:
-
-// Сайт запрашивает у пользователя текст.
-// Сайт переворачивает введенный текст.
-// Сайт выводит перевернутый текст.
-
-function guiz3 () {
-let userGuestion = prompt("Введите текст, а я переверну его :D");
-let reversedUserGuestion = userGuestion.split("").reverse().join("");   
-alert(`Перевернутый текст: ${reversedUserGuestion}`)
-
-}
-document.getElementById('invertedText').addEventListener('click',guiz3)
+document.getElementById("simpleArithmetic").addEventListener("click", guiz2);

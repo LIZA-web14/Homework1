@@ -807,7 +807,7 @@ console.log(result1)
 const result2 = Math.ceil(num);
 console.log(result2)
 
-const result3 = Math.random(num);
+const result3 = Math.round(num);
 console.log(result3)
 
 // Задание 4
@@ -818,8 +818,8 @@ const number = [52, 53, 49, 77, 21, 32];
 const min = Math.min(...number); // Троеточие распаковывает массив
 const max = Math.max(...number);
 
-console.log("Минимальное значение: ${min}");
-console.log("Махсимальное значение: ${max}");
+console.log(`Минимальное значение: ${min}`);
+console.log(`Махсимальное значение: ${max}`);
 // Задание 5
 // Создать функцию, которая выводит в консоль случайное число от 1 до 10.
 
