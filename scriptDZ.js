@@ -950,7 +950,7 @@ console.log(people.sort((a, b) => a.age - b.age));
 function isPositive(num) {
 return num > 0;
 }
-function isMale(name) {
+function isMale(person) {
 return person.gender === 'male';
 }
 function filter(array, ruleFunction) {
@@ -991,7 +991,7 @@ const timer = setInterval (
         //  увеличиваем счётчик времени на 3 секунды 
         StartOfReport += 3;
         if (StartOfReport >= 30){
-            clearInterval(StartOfReport);
+            clearInterval(timer);
             console.log("30 секунд прошло")
         }
     }, 3000);
