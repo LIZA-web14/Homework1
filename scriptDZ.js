@@ -1154,7 +1154,7 @@ bt3.addEventListener('click', () => {
 
 const description1 = document.querySelectorAll('.description');
 
-descriptionP.forEach(paragraph => {
+description1.forEach(paragraph => {
  paragraph.textContent = 'Измененный текст';
 } );
 // Задание 5. Работа с querySelectorAll
@@ -1246,7 +1246,7 @@ buttonClick.addEventListener('click', () => {
 const deleteBtn = document.querySelector('.delete-btn');
 
 deleteBtn.addEventListener('click',() => {
-    const firstParagraph = document.querySelector('description');
+    const firstParagraph = document.querySelector('.description');
     if (firstParagraph) {
         firstParagraph.remove();
     }
