@@ -247,3 +247,27 @@ function guiz4(){
 
 }
 document.getElementById("RockPaperScissors").addEventListener("click", guiz4);
+
+/////////////////////////Генерация случайных цветов ///////////////////////////
+
+
+// 1. Вспомогательная функция
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+// 2. Функция-действие: ТОЛЬКО меняет цвет
+function guiz6() {
+  const colorDiv = document.querySelector('.hero-black');
+  if (colorDiv) {
+    colorDiv.style.backgroundColor = getRandomColor();
+  }
+}
+
+// 3. При клике на кнопку с id="colorChange" вызываем guiz6
+document.getElementById("colorChange").addEventListener("click", guiz6);
