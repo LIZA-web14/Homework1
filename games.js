@@ -101,6 +101,7 @@ function guiz1() {
     }
   }
 }
+document.getElementById("guessNumber").addEventListener("click", guiz1);
 
 
 //////////////////Игра "Простая арифметика"///////////////////////
@@ -255,6 +256,7 @@ document.getElementById("RockPaperScissors").addEventListener("click", guiz4);
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
+
   for (let i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
@@ -271,3 +273,24 @@ function guiz6() {
 
 // 3. При клике на кнопку с id="colorChange" вызываем guiz6
 document.getElementById("colorChange").addEventListener("click", guiz6);
+
+
+////////////////// Игра «Переверни текст» ///////////////////////
+function guiz3() {
+    const userText = prompt("Введите текст, который хотите перевернуть:");
+
+    if (userText === null) {
+        alert("Игра отменена");
+        return;
+    }
+
+    if (userText.trim() === "") {
+        alert("Вы ничего не ввели!");
+        return;
+    }
+
+    const reversed = userText.split("").reverse().join("");
+    alert(`Перевернутый текст:\n${reversed}`);
+}
+
+document.getElementById("invertedText").addEventListener("click", guiz3);
